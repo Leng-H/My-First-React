@@ -12,6 +12,10 @@ const Header = (props) => {
         I am {props.myObj.name}. I am {props.myObj.age} years old.{" "}
       </p>
 
+      <hr />
+      {props.children}
+      <hr />
+
       <div>
         <h3>Hobbies</h3>
         {/* map() is used here because in App.js, hobbies is an array */}
@@ -31,6 +35,8 @@ Header.prototype = {
   name: PropTypes.string,
   age: PropTypes.number,
   hobbies: PropTypes.object,
+
+  children: PropTypes.element.isRequired,
 };
 
 export default Header;
