@@ -11,7 +11,7 @@ function App() {
 
   return (
     <div className="App-header">
-      {/* Passing values to Header. Then, go to Header.js and access the value using props */}
+      {/* Passing values to Header as follows. Then, go to Header.js and access the value using props */}
       <Header myStr={"Some string"} myNum={42354} myObj={obj} />
       <Body />
     </div>

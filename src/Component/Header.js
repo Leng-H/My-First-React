@@ -15,8 +15,8 @@ const Header = (props) => {
         <h3>Hobbies</h3>
         {/* map() is used here because in App.js, hobbies is an array */}
         <ul>
-          {props.myObj.hobbies.map((input) => (
-            <li>{input}</li>
+          {props.myObj.hobbies.map((input, i) => (
+            <li key={i}>{input}</li>
           ))}
         </ul>
       </div>
