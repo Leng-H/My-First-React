@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const Header = (props) => {
   console.log("In Header.js");
@@ -22,6 +23,14 @@ const Header = (props) => {
       </div>
     </div>
   );
+};
+
+// Typechecking with PropTypes: It's a good practice.
+// PropTypes exports a range of validators that can be used to make sure the data you receive is valid.
+Header.prototype = {
+  name: PropTypes.string,
+  age: PropTypes.number,
+  hobbies: PropTypes.object,
 };
 
 export default Header;
