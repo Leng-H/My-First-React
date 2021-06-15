@@ -19,7 +19,7 @@ function App() {
       <Header myStr={"Some string"} myNum={42354} myObj={obj}>
         <p>This is in between the Header tag in App.js</p>
       </Header>
-      <Body />
+      <Body myObj={obj} />
     </div>
   );
 }
