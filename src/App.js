@@ -4,9 +4,13 @@ import "./App.css";
 
 function App() {
   const obj = {
-    name: "Jake",
+    name: "Robot 3000",
     age: 45,
     hobbies: ["Walking", "Reading", "Meditating in the toilet"],
+  };
+
+  const onGreet = () => {
+    alert("Hello human...");
   };
 
   return (
@@ -19,7 +23,12 @@ function App() {
       <Header myStr={"Some string"} myNum={42354} myObj={obj}>
         <p>This is in between the Header tag in App.js</p>
       </Header>
-      <Body myObj={obj} />
+
+      {/* Passing function to child Body.js, where it'll be called using "props.greet".
+          And this is callbacks. This is the only way to do child-to-parent communication.
+          _ SIDE-NOTE: if you were to use the this keyword in the method, then you'd need 
+          to bind it; this.onGreet.bind(this) */}
+      <Body myObj={obj} greet={onGreet} />
     </div>
   );
 }
